@@ -1,0 +1,25 @@
+Doel: Combineren informatie uit peilingen en uit covariates.
+
+ElectionOutcome ~ Normally (Polling average + FundamentalPredictedVoteshare + Pollingaverage*DaysTillElection  Residual)
+
+
+Voting intention + Bias ~ Normally (y(formula) , Bias)
+-> Verschillende modellen van polling average, welke leidt tot de beste fit?
+
+y = (alpha + b1 Polling average + b2 Economie + b3 Regering + b4 RegeringEconomie + b5 Premier + b6 PremierRegering + VeranderingLeden + Dagensindsverkiezing) 
+
+Peilinggemiddelde
+Als de peilingen ongeveer een gelijke spreiding over tijd hebben dan: Verschillen over tijd vallen weg door mean te nemen
+Sum(Gemiddelde peilinghuis iv)/iv
+voor peilinghuis i in verkiezing v. 
+
+Gemiddelde - Gemiddelde peilhuis iv
+
+
+Variance = (time invariant Variance)/Number of polls + Number of days * Time variance
+                    Constant                Variable          Variable        Constant
+                    
+(Weight Poll1sq * variance + weightn sq * variance)
+
+Percentage/Zetels: (100 - kleine lijsten) / 150
+Kleine lijsten zijn lijsten die geen zetel behalen. Als de steun voor deze lijsten bij elkaar nul is is dat 66.7, in de praktijk licht het ongeveer tussen de 63 en 65. En steun voor de kleine partijen tussen 2.5% en 5.5%.
