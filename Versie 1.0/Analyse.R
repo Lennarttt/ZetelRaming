@@ -12,7 +12,7 @@
 # De code is geschreven in R, en maakt veel gebruik van functies en de '%>%' 
 # operator uit het TidyVerse package.p
 
-setwd("/dataproject/Peilingen")              # Pas dit pad aan naar waar u de 
+setwd("dataproject/Peilingen")  # Pas dit pad aan naar waar u de 
 library("tidyverse")                         # datasets heeft opgeslagen.
 options(mc.cores = parallel::detectCores())
 library(lubridate)
@@ -166,7 +166,7 @@ Gemiddeldes = tibble(today(), 2.1, "Partij",
 colnames(Gemiddeldes) = c("Publicatie", "Percentage", "Partij")
 
 Peilingen = Peilingen %>% mutate(Partij = as.character(Partij)) %>%
- filter( Partij != "BBB", Partij != "NA", Partij != "Overig")
+ filter( Partij != "BBB", Partij != "NA", Partij != "Overig", Partij != "Splinter")
 
 for (e in unique(Peilingen$Partij)) {
   peilset = Peilingen %>% 
